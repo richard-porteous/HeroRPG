@@ -21,7 +21,7 @@ func _physics_process(delta):
 	get_input()
 	var anim = "default" # or "idle" if you renamed
 	_animated_sprite.flip_h = false
-
+	
 	if velocity.y > 0:
 		anim = "down"
 	elif velocity.y < 0:
