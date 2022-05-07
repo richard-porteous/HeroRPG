@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/hospital.png" type="Texture" id=1]
 [ext_resource path="res://Assets/store.png" type="Texture" id=2]
@@ -9,10 +9,17 @@
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Camera2D.gd" type="Script" id=8]
 
+[sub_resource type="RectangleShape2D" id=1]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 0, 300 )
 current = true
+limit_left = 0
+limit_right = 1576
+limit_smoothed = true
+smoothing_speed = 2.0
 script = ExtResource( 8 )
 
 [node name="Background" type="Sprite" parent="."]
@@ -84,3 +91,33 @@ flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 316, 432 )
+
+[node name="Border" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border"]
+position = Vector2( -24, 506 )
+scale = Vector2( -4.78901, 15.2617 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Border"]
+position = Vector2( 1534, 496 )
+scale = Vector2( -4.78901, 15.2617 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D2"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Border"]
+position = Vector2( 749, 381 )
+scale = Vector2( -73.7972, 4.80472 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D3"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Border"]
+position = Vector2( 752, 645 )
+scale = Vector2( -73.7972, 4.80472 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D4"]
+shape = SubResource( 1 )
