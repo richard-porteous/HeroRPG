@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/hospital.png" type="Texture" id=1]
 [ext_resource path="res://Assets/store.png" type="Texture" id=2]
@@ -8,8 +8,20 @@
 [ext_resource path="res://Assets/background/layer-1.png" type="Texture" id=6]
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Camera2D.gd" type="Script" id=8]
+[ext_resource path="res://Assets/mayor/female_stand.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15, 3.5 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -89,9 +101,6 @@ z_index = -1
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 316, 432 )
-
 [node name="Border" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Border"]
@@ -121,3 +130,20 @@ scale = Vector2( -73.7972, 4.80472 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D4"]
 shape = SubResource( 1 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 339, 454 )
+
+[node name="Mayor" type="KinematicBody2D" parent="YSort"]
+position = Vector2( 786, 456 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Mayor"]
+position = Vector2( -1, -25 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 4 )
+offset = Vector2( 0, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Mayor"]
+shape = SubResource( 3 )
