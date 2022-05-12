@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hospital.png-d0b8761fb1e3e48c224cefad53c3f81e.stex"
+path="res://.import/sidewalkL.png-e45719c6522a8ce23e231a2e45e3722e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hospital.png"
-dest_files=[ "res://.import/hospital.png-d0b8761fb1e3e48c224cefad53c3f81e.stex" ]
+source_file="res://Assets/background/sidewalkL.png"
+dest_files=[ "res://.import/sidewalkL.png-e45719c6522a8ce23e231a2e45e3722e.stex" ]
 
 [params]
 

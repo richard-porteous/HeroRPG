@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sidewalkL.png-81cf4708074b42e598bedf051b8c1e96.stex"
+path="res://.import/dialogue.png-d4b1860d3a881be863badb04755f1628.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sidewalkL.png"
-dest_files=[ "res://.import/sidewalkL.png-81cf4708074b42e598bedf051b8c1e96.stex" ]
+source_file="res://Assets/dilogue/dialogue.png"
+dest_files=[ "res://.import/dialogue.png-d4b1860d3a881be863badb04755f1628.stex" ]
 
 [params]
 
