@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/background/hospital.png" type="Texture" id=1]
 [ext_resource path="res://Assets/background/store.png" type="Texture" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Assets/background/sidewalkL.png" type="Texture" id=4]
 [ext_resource path="res://Assets/background/streetL.png" type="Texture" id=5]
 [ext_resource path="res://Assets/background/layer-1.png" type="Texture" id=6]
-[ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Camera2D.gd" type="Script" id=8]
 [ext_resource path="res://Assets/dilogue/dialogue.png" type="Texture" id=9]
 [ext_resource path="res://Assets/mayor/female_stand.png" type="Texture" id=10]
@@ -142,9 +141,6 @@ scale = Vector2( -73.7972, 4.80472 )
 shape = SubResource( 1 )
 
 [node name="YSort" type="YSort" parent="."]
-
-[node name="Player" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 339, 454 )
 
 [node name="Mayor" type="KinematicBody2D" parent="YSort"]
 position = Vector2( 786, 456 )

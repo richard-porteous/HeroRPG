@@ -1,9 +1,9 @@
-extends KinematicBody
+extends Sprite3D
 
-export (int) var speed = 200
-var multiplier = 1
-onready var _animated_sprite = $AnimatedSprite
-var last_mouse_pos = null
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,5 +12,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	
+	pass
