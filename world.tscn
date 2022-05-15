@@ -1,17 +1,12 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/background/hospital.png" type="Texture" id=1]
 [ext_resource path="res://Assets/background/store.png" type="Texture" id=2]
 [ext_resource path="res://Assets/background/Library.png" type="Texture" id=3]
-[ext_resource path="res://Viewport.gd" type="Script" id=4]
+[ext_resource path="res://SpeechBubble.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/background/layer-1.png" type="Texture" id=6]
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/mayor/female_stand.png" type="Texture" id=10]
-[ext_resource path="res://Assets/font/Gogh-ExtraBold.otf" type="DynamicFontData" id=11]
-
-[sub_resource type="DynamicFont" id=11]
-size = 64
-font_data = ExtResource( 11 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -22,9 +17,6 @@ animations = [ {
 } ]
 
 [sub_resource type="BoxShape" id=9]
-
-[sub_resource type="ViewportTexture" id=12]
-viewport_path = NodePath("Spatial/Viewport")
 
 [sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.309804, 0.619608, 0.180392, 1 )
@@ -59,27 +51,6 @@ texture = ExtResource( 2 )
 [node name="Player" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69325, 0.326187, 1.75237 )
 
-[node name="Spatial" type="Spatial" parent="."]
-transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 1, 0.092988, 0.583312, 1.81503 )
-
-[node name="Viewport" type="Viewport" parent="Spatial"]
-size = Vector2( 470, 181 )
-size_override_stretch = true
-transparent_bg = true
-render_target_v_flip = true
-script = ExtResource( 4 )
-
-[node name="Label" type="Label" parent="Spatial/Viewport"]
-margin_right = 470.0
-margin_bottom = 89.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 11 )
-text = "Sorry I''m busy
-right now!"
-align = 1
-valign = 1
-autowrap = true
-
 [node name="Mayor" type="KinematicBody" parent="."]
 transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 1, 0.0929635, 0.593129, 1.81456 )
 
@@ -90,9 +61,7 @@ frames = SubResource( 4 )
 [node name="CollisionShape" type="CollisionShape" parent="Mayor"]
 shape = SubResource( 9 )
 
-[node name="Dialogue" type="Sprite3D" parent="Mayor"]
-transform = Transform( 0.355458, 0, 0, 0, 0.370411, 0, 0, 0, 0.497573, 1.16114, -0.0956052, 0.155792 )
-texture = SubResource( 12 )
+[node name="SpeechBubble" parent="Mayor" instance=ExtResource( 4 )]
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37316, 0.828804, 11.7052 )
