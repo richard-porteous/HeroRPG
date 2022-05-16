@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detailLight_double.obj-2a41f8a45cf2e204087eecb402e3176c.mesh"
+
+[deps]
+
+files=[ "res://.import/detailLight_double.obj-2a41f8a45cf2e204087eecb402e3176c.mesh" ]
+
+source_file="res://Assets/kenney_retroUrbanKit/Models/OBJ format/detailLight_double.obj"
+dest_files=[ "res://.import/detailLight_double.obj-2a41f8a45cf2e204087eecb402e3176c.mesh", "res://.import/detailLight_double.obj-2a41f8a45cf2e204087eecb402e3176c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

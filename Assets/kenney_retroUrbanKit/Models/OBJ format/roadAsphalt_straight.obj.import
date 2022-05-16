@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadAsphalt_straight.obj-db7fdde18b7ad79729987287a3cdc5ed.mesh"
+
+[deps]
+
+files=[ "res://.import/roadAsphalt_straight.obj-db7fdde18b7ad79729987287a3cdc5ed.mesh" ]
+
+source_file="res://Assets/kenney_retroUrbanKit/Models/OBJ format/roadAsphalt_straight.obj"
+dest_files=[ "res://.import/roadAsphalt_straight.obj-db7fdde18b7ad79729987287a3cdc5ed.mesh", "res://.import/roadAsphalt_straight.obj-db7fdde18b7ad79729987287a3cdc5ed.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
