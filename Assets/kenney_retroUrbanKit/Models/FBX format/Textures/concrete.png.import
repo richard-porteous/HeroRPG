@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/concrete.png-31886e7052383d5a813f9d99698dd72c.s3tc.stex"
-path.etc2="res://.import/concrete.png-31886e7052383d5a813f9d99698dd72c.etc2.stex"
+path.s3tc="res://.import/concrete.png-296bc0abdd02f820988cfda25d87fa64.s3tc.stex"
+path.etc2="res://.import/concrete.png-296bc0abdd02f820988cfda25d87fa64.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/concrete.png"
-dest_files=[ "res://.import/concrete.png-31886e7052383d5a813f9d99698dd72c.s3tc.stex", "res://.import/concrete.png-31886e7052383d5a813f9d99698dd72c.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/concrete.png"
+dest_files=[ "res://.import/concrete.png-296bc0abdd02f820988cfda25d87fa64.s3tc.stex", "res://.import/concrete.png-296bc0abdd02f820988cfda25d87fa64.etc2.stex" ]
 
 [params]
 

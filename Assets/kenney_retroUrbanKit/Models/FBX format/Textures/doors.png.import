@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/doors.png-722b85b8222d0b163a01326ceed195a4.s3tc.stex"
-path.etc2="res://.import/doors.png-722b85b8222d0b163a01326ceed195a4.etc2.stex"
+path.s3tc="res://.import/doors.png-b003887453841b38bcbc1b42e340c6f8.s3tc.stex"
+path.etc2="res://.import/doors.png-b003887453841b38bcbc1b42e340c6f8.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/doors.png"
-dest_files=[ "res://.import/doors.png-722b85b8222d0b163a01326ceed195a4.s3tc.stex", "res://.import/doors.png-722b85b8222d0b163a01326ceed195a4.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/doors.png"
+dest_files=[ "res://.import/doors.png-b003887453841b38bcbc1b42e340c6f8.s3tc.stex", "res://.import/doors.png-b003887453841b38bcbc1b42e340c6f8.etc2.stex" ]
 
 [params]
 

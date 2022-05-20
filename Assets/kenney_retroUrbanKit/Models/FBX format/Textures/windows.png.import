@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/windows.png-76dac017c250b20cf2051535c3d739ff.s3tc.stex"
-path.etc2="res://.import/windows.png-76dac017c250b20cf2051535c3d739ff.etc2.stex"
+path.s3tc="res://.import/windows.png-0194ef344215fff7f91371898d54797b.s3tc.stex"
+path.etc2="res://.import/windows.png-0194ef344215fff7f91371898d54797b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/windows.png"
-dest_files=[ "res://.import/windows.png-76dac017c250b20cf2051535c3d739ff.s3tc.stex", "res://.import/windows.png-76dac017c250b20cf2051535c3d739ff.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/windows.png"
+dest_files=[ "res://.import/windows.png-0194ef344215fff7f91371898d54797b.s3tc.stex", "res://.import/windows.png-0194ef344215fff7f91371898d54797b.etc2.stex" ]
 
 [params]
 

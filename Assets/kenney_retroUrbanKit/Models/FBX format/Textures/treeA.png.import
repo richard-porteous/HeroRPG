@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/treeA.png-3d2d0f0dbd4ad802cd4d98ce188f7968.s3tc.stex"
-path.etc2="res://.import/treeA.png-3d2d0f0dbd4ad802cd4d98ce188f7968.etc2.stex"
+path.s3tc="res://.import/treeA.png-33b58a2b5edf5422e376753fd621ca5f.s3tc.stex"
+path.etc2="res://.import/treeA.png-33b58a2b5edf5422e376753fd621ca5f.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/treeA.png"
-dest_files=[ "res://.import/treeA.png-3d2d0f0dbd4ad802cd4d98ce188f7968.s3tc.stex", "res://.import/treeA.png-3d2d0f0dbd4ad802cd4d98ce188f7968.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/treeA.png"
+dest_files=[ "res://.import/treeA.png-33b58a2b5edf5422e376753fd621ca5f.s3tc.stex", "res://.import/treeA.png-33b58a2b5edf5422e376753fd621ca5f.etc2.stex" ]
 
 [params]
 

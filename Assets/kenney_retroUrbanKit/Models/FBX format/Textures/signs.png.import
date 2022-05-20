@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/signs.png-3dc1092742222a98503cbaa51d69949a.s3tc.stex"
-path.etc2="res://.import/signs.png-3dc1092742222a98503cbaa51d69949a.etc2.stex"
+path.s3tc="res://.import/signs.png-3cb9994491445a221b524f79dc89f3ba.s3tc.stex"
+path.etc2="res://.import/signs.png-3cb9994491445a221b524f79dc89f3ba.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/signs.png"
-dest_files=[ "res://.import/signs.png-3dc1092742222a98503cbaa51d69949a.s3tc.stex", "res://.import/signs.png-3dc1092742222a98503cbaa51d69949a.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/signs.png"
+dest_files=[ "res://.import/signs.png-3cb9994491445a221b524f79dc89f3ba.s3tc.stex", "res://.import/signs.png-3cb9994491445a221b524f79dc89f3ba.etc2.stex" ]
 
 [params]
 

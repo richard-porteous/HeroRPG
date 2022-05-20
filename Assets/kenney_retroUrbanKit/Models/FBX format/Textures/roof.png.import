@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/roof.png-d8bd1d75d5d692711e02a70b35d08891.s3tc.stex"
-path.etc2="res://.import/roof.png-d8bd1d75d5d692711e02a70b35d08891.etc2.stex"
+path.s3tc="res://.import/roof.png-fda7d322a0f6112013366a918903f54b.s3tc.stex"
+path.etc2="res://.import/roof.png-fda7d322a0f6112013366a918903f54b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/roof.png"
-dest_files=[ "res://.import/roof.png-d8bd1d75d5d692711e02a70b35d08891.s3tc.stex", "res://.import/roof.png-d8bd1d75d5d692711e02a70b35d08891.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/roof.png"
+dest_files=[ "res://.import/roof.png-fda7d322a0f6112013366a918903f54b.s3tc.stex", "res://.import/roof.png-fda7d322a0f6112013366a918903f54b.etc2.stex" ]
 
 [params]
 

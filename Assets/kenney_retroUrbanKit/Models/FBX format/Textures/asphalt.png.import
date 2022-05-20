@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/asphalt.png-d7b2595c19e86e9d63eb03d71acf7c7e.s3tc.stex"
-path.etc2="res://.import/asphalt.png-d7b2595c19e86e9d63eb03d71acf7c7e.etc2.stex"
+path.s3tc="res://.import/asphalt.png-9cdfaa345795da8e214f100b243802a2.s3tc.stex"
+path.etc2="res://.import/asphalt.png-9cdfaa345795da8e214f100b243802a2.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/asphalt.png"
-dest_files=[ "res://.import/asphalt.png-d7b2595c19e86e9d63eb03d71acf7c7e.s3tc.stex", "res://.import/asphalt.png-d7b2595c19e86e9d63eb03d71acf7c7e.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/asphalt.png"
+dest_files=[ "res://.import/asphalt.png-9cdfaa345795da8e214f100b243802a2.s3tc.stex", "res://.import/asphalt.png-9cdfaa345795da8e214f100b243802a2.etc2.stex" ]
 
 [params]
 

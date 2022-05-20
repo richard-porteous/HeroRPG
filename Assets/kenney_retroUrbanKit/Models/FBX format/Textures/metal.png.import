@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/metal.png-bbf4ee75cc35aaa90f20056ff53d1529.s3tc.stex"
-path.etc2="res://.import/metal.png-bbf4ee75cc35aaa90f20056ff53d1529.etc2.stex"
+path.s3tc="res://.import/metal.png-f26fa8454c8879da44880db364fba637.s3tc.stex"
+path.etc2="res://.import/metal.png-f26fa8454c8879da44880db364fba637.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/metal.png"
-dest_files=[ "res://.import/metal.png-bbf4ee75cc35aaa90f20056ff53d1529.s3tc.stex", "res://.import/metal.png-bbf4ee75cc35aaa90f20056ff53d1529.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/metal.png"
+dest_files=[ "res://.import/metal.png-f26fa8454c8879da44880db364fba637.s3tc.stex", "res://.import/metal.png-f26fa8454c8879da44880db364fba637.etc2.stex" ]
 
 [params]
 

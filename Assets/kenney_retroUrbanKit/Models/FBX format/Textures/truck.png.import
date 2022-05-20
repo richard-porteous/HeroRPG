@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/truck.png-f6e09f7a778de6c72f44f5476b865a0b.s3tc.stex"
-path.etc2="res://.import/truck.png-f6e09f7a778de6c72f44f5476b865a0b.etc2.stex"
+path.s3tc="res://.import/truck.png-96a71b65b433fc3e220bc17c91315f03.s3tc.stex"
+path.etc2="res://.import/truck.png-96a71b65b433fc3e220bc17c91315f03.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/truck.png"
-dest_files=[ "res://.import/truck.png-f6e09f7a778de6c72f44f5476b865a0b.s3tc.stex", "res://.import/truck.png-f6e09f7a778de6c72f44f5476b865a0b.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/truck.png"
+dest_files=[ "res://.import/truck.png-96a71b65b433fc3e220bc17c91315f03.s3tc.stex", "res://.import/truck.png-96a71b65b433fc3e220bc17c91315f03.etc2.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/grass.png-8ff00965305554ba015ec30c35804de1.s3tc.stex"
-path.etc2="res://.import/grass.png-8ff00965305554ba015ec30c35804de1.etc2.stex"
+path.s3tc="res://.import/grass.png-04f3eca1ed374b85f8fd9370ec98a409.s3tc.stex"
+path.etc2="res://.import/grass.png-04f3eca1ed374b85f8fd9370ec98a409.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/textures/grass.png"
-dest_files=[ "res://.import/grass.png-8ff00965305554ba015ec30c35804de1.s3tc.stex", "res://.import/grass.png-8ff00965305554ba015ec30c35804de1.etc2.stex" ]
+source_file="res://Assets/kenney_retroUrbanKit/Models/FBX format/Textures/grass.png"
+dest_files=[ "res://.import/grass.png-04f3eca1ed374b85f8fd9370ec98a409.s3tc.stex", "res://.import/grass.png-04f3eca1ed374b85f8fd9370ec98a409.etc2.stex" ]
 
 [params]
 

@@ -1,16 +1,78 @@
 extends KinematicBody
 
-export (int) var speed = 200
+export (int) var speed = 2 #200
 var multiplier = 1
 onready var _animated_sprite = $AnimatedSprite
 var last_mouse_pos = null
+var velocity:Vector3 = Vector3.ZERO
+var camera_angle = 90
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+#var flip
 
+func get_input():
+	
+	if Input.is_action_pressed("right"):
+		velocity += transform.basis.x
+	if Input.is_action_pressed("left"):
+		velocity += -transform.basis.x
+	if Input.is_action_pressed("down"):
+		velocity += transform.basis.z
+	if Input.is_action_pressed("up"):
+		velocity += -transform.basis.z
+	if Input.is_action_pressed("run"):
+		multiplier = 1.5
+	if Input.is_action_just_pressed("flip"):
+		if camera_angle > 0:
+			camera_angle = -90
+		else:
+			camera_angle = 90
+		$CameraHub.rotate_y(deg2rad(camera_angle))
+		$AnimatedSprite.rotate_y(deg2rad(camera_angle))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+#func _input(event):
+#	if event is InputEventMouseButton:
+#		last_mouse_pos = get_global_mouse_position() #event.position #get_viewport().get_mouse_position()
+
+func _physics_process(delta):
+
+	velocity = Vector3.ZERO
+	multiplier = 1
+
+#	if last_mouse_pos:
+#		velocity = last_mouse_pos - global_position
+#		if velocity.length() < 3:
+#			last_mouse_pos = null
+#			return
+#	else:
+
+	get_input()
+		
+	var anim = "default" # or "idle" if you renamed
+	_animated_sprite.flip_h = false
+	
+	#Direction Code
+	if abs(velocity.z) > abs(velocity.x):
+		if velocity.z > 0:
+			anim = "down"
+		elif velocity.z < 0:
+			anim = "up"
+	else:
+		if velocity.x < 0:
+			anim = "left_right"
+			_animated_sprite.flip_h = true
+		elif velocity.x > 0:
+			anim = "left_right"
+	
+	if _animated_sprite.animation != anim:
+		_animated_sprite.stop()
+
+	_animated_sprite.play(anim)
+
+	velocity = velocity.normalized() * speed * multiplier
+
+	velocity = move_and_slide(velocity)
+	if get_slide_count() > 0:
+		last_mouse_pos = null
+	
+
