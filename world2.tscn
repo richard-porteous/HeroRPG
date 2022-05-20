@@ -1,0 +1,389 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/background/hospital.png" type="Texture" id=1]
+[ext_resource path="res://Assets/background/store.png" type="Texture" id=2]
+[ext_resource path="res://Assets/background/Library.png" type="Texture" id=3]
+[ext_resource path="res://SpeechBubble.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/kenney_retroUrbanKit/Models/OBJ format/roadAsphalt_pavement.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Assets/background/layer-1.png" type="Texture" id=6]
+[ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/kenney_retroUrbanKit/Models/OBJ format/roadAsphalt_side.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://Assets/kenney_retroUrbanKit/Models/OBJ format/roadAsphalt_center.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://Assets/mayor/female_stand.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="BoxShape" id=9]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.309804, 0.619608, 0.180392, 1 )
+
+[sub_resource type="PlaneMesh" id=8]
+material = SubResource( 7 )
+size = Vector2( 30, 24 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 15, 0.1, 12 )
+
+[node name="World" type="Node"]
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.28, 0, 0, 0, 1, 0.940419, 5.58944, -9.46148 )
+texture = ExtResource( 6 )
+
+[node name="Middle" type="Spatial" parent="."]
+
+[node name="Hospital" type="Sprite3D" parent="Middle"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97946, 1.46962, 0 )
+texture = ExtResource( 1 )
+
+[node name="Library" type="Sprite3D" parent="Middle"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0209222, 1.28757, 0 )
+texture = ExtResource( 3 )
+
+[node name="Store" type="Sprite3D" parent="Middle"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0213, 1.49893, 0 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69325, 0.326187, 1.04014 )
+
+[node name="Mayor" type="KinematicBody" parent="."]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 1, 0.0929635, 0.593129, 1.09078 )
+
+[node name="AnimatedSprite" type="AnimatedSprite3D" parent="Mayor"]
+offset = Vector2( 0, -20 )
+frames = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Mayor"]
+shape = SubResource( 9 )
+
+[node name="SpeechBubble" parent="Mayor" instance=ExtResource( 4 )]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.993938, 0.109942, 0, -0.109942, 0.993938, -2.37316, 2.84116, 11.3357 )
+fov = 22.0
+size = 3.0
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+mesh = SubResource( 8 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.095, 0 )
+shape = SubResource( 10 )
+
+[node name="Sidewalk" type="Spatial" parent="."]
+
+[node name="roadAsphalt_center" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.48523, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center2" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.48098, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center3" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.49807, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center4" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.49381, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center5" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.52656, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center6" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.5223, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center7" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.5394, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center8" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.535138, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center9" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.461654, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center10" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.46591, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center11" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.44882, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center12" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.45308, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center13" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.42033, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center14" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.42458, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center15" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.40749, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_center16" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.41175, 0.018, 2.37543 )
+mesh = ExtResource( 9 )
+skeleton = NodePath("../roadAsphalt_side")
+material/0 = null
+
+[node name="roadAsphalt_side" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.48456, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side2" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.48841, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side3" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.49516, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side4" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.49901, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side5" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.52418, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side6" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.52803, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side7" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.53477, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side8" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.538631, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side9" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.439216, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side10" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.43536, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side11" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.42862, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side12" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.42476, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side13" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.3996, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side14" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.39574, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side15" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.389, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_side16" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.38514, 0.018, 1.374 )
+mesh = ExtResource( 8 )
+skeleton = NodePath("../roadAsphalt_pavement")
+material/0 = null
+material/1 = null
+
+[node name="roadAsphalt_pavement" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48594, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement2" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.48563, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement3" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49531, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement4" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.495, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement5" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.52999, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement6" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52968, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement7" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53936, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement8" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.539052, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement9" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.437425, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement10" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43773, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement11" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42806, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement12" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42836, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement13" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39337, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement14" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39368, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement15" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38401, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="roadAsphalt_pavement16" type="MeshInstance" parent="Sidewalk"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.38431, 0.0687938, 0.403109 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = null
