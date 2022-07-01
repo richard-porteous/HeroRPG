@@ -19,6 +19,8 @@ func get_input():
 		velocity.y -= 1
 	if Input.is_action_pressed("run"):
 		multiplier = 1.5
+	else:
+		multiplier = 1
 
 
 func _input(event):
@@ -28,15 +30,16 @@ func _input(event):
 func _physics_process(delta):
 
 	velocity = Vector2()
-	multiplier = 1
+	get_input()
 
 	if last_mouse_pos:
+
 		velocity = last_mouse_pos - global_position
 		if velocity.length() < 3:
 			last_mouse_pos = null
 			return
-	else:
-		get_input()
+	
+		
 		
 	var anim = "default" # or "idle" if you renamed
 	_animated_sprite.flip_h = false
